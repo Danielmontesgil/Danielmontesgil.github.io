@@ -120,6 +120,27 @@ body {
     transform: scale(1.05);
 }
 
+
+/* About Section */
+#about {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
     #home h1 {
