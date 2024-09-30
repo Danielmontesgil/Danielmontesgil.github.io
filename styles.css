@@ -12,6 +12,12 @@ body {
     line-height: 1.6;
 }
 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Home Section */
 #home {
     height: 100vh;
@@ -21,12 +27,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-#home .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 #home h1 {
@@ -63,12 +63,6 @@ body {
     background-color: #fff;
     padding: 50px 20px;
     text-align: center;
-}
-
-#projects .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 #projects h2 {
@@ -134,12 +128,6 @@ body {
     text-align: center;
 }
 
-#about .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 #about h2 {
     font-size: 2.8rem;
     margin-bottom: 30px;
@@ -177,12 +165,6 @@ body {
     color: #fff;
     padding: 60px 20px;
     text-align: center;
-}
-
-#contact .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 #contact h2 {
