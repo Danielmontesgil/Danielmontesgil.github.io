@@ -20,26 +20,29 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="project-grid">
-    
                 <!-- Project 1 -->
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('Project Name 1', 'Brief description of the project, technologies used, and role played.', 'https://github.com/Danielmontesgil/project1')">
                     <img src="project1.jpg" alt="Project 1">
                     <h3>Project Name 1</h3>
-                    <p>Brief description of the project, what technologies you used and the role you played.</p>
-                    <a href="https://github.com/Danielmontesgil/project1" class="project-link" target="_blank">View on GitHub</a>
+                    <p>Brief description of the project, technologies used, and role played.</p>
                 </div>
-    
                 <!-- Project 2 -->
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('Project Name 2', 'Brief description of the project, technologies used, and role played.', 'https://github.com/Danielmontesgil/project2')">
                     <img src="project2.jpg" alt="Project 2">
                     <h3>Project Name 2</h3>
-                    <p>Brief description of the project, what technologies you used and the role you played.</p>
-                    <a href="https://github.com/Danielmontesgil/project2" class="project-link" target="_blank">View on GitHub</a>
+                    <p>Brief description of the project, technologies used, and role played.</p>
                 </div>
-    
             </div>
         </div>
     </section>
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalProjectTitle"></h3>
+            <p id="modalProjectDescription"></p>
+            <a id="modalProjectLink" class="project-link" target="_blank">View on GitHub</a>
+        </div>
+    </div>
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -63,6 +66,28 @@
                 <a href="https://github.com/Danielmontesgil" target="_blank" class="contact-button">GitHub</a>
             </div>
         </div>
-    </section>           
+    </section>
+    <script>
+        var modal = document.getElementById("projectModal");
+        var span = document.getElementsByClassName("close")[0];
+        
+        function openModal(title, description, link) {
+            document.getElementById("modalProjectTitle").innerText = title;
+            document.getElementById("modalProjectDescription").innerText = description;
+            document.getElementById("modalProjectLink").href = link;
+            modal.style.display = "flex";  // Cambiar "block" por "flex" para el centrado
+        }
+        
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+                
 </body>
 </html>
