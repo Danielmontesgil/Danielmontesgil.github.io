@@ -135,21 +135,6 @@ body {
     background-color: rgba(0,0,0,0.7); /* Fondo semi-transparente */
     justify-content: center;
     align-items: center;
-    transform: scale(0.95); /* Efecto de zoom pequeño */
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-}
-
-.modal.show {
-    transform: translate(-50%, -50%) scale(1); /* Efecto de zoom a tamaño normal */
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal.hide {
-    transform: translate(-50%, -50%) scale(0.95); /* Efecto de contracción al cerrar */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
 .modal-content {
