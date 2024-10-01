@@ -243,6 +243,43 @@ body {
     display: inline-block;
 }
 
+/* Animaciones */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 1;
+}
+
+/* Opcional: Agrega un retardo para las tarjetas de proyecto */
+.project-card {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+
 /* Responsive Styling */
 @media (max-width: 768px) {
     #home h1 {

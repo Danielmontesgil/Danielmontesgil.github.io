@@ -23,3 +23,29 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Efecto de aparición al hacer scroll
+const animatedElements = document.querySelectorAll('.animated');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-up');
+            observer.unobserve(entry.target); // Deja de observar una vez que ha aparecido
+        }
+    });
+}, { threshold: 0.1 });
+
+animatedElements.forEach(element => {
+    observer.observe(element);
+});
