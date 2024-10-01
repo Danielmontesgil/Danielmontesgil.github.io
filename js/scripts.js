@@ -2,14 +2,26 @@
 var modal = document.getElementById("projectModal");
 
 // Función para abrir el modal
-function openModal(title, description, link) {
+function openModal(title, description, link, techLogos) {
     document.getElementById("modalProjectTitle").innerText = title;
     document.getElementById("modalProjectDescription").innerText = description;
     document.getElementById("modalProjectLink").href = link;
 
+    // Limpia los logos anteriores
+    const techLogosContainer = document.getElementById("modalTechLogos");
+    techLogosContainer.innerHTML = ''; // Limpiar contenido anterior
+
+    // Agrega los logos de tecnologías
+    techLogos.forEach(logo => {
+        const img = document.createElement('img');
+        img.src = logo; // URL del logo
+        img.alt = "Technology Logo"; // Texto alternativo
+        techLogosContainer.appendChild(img);
+    });
+
     // Inicialmente, configuramos display flex pero sin mostrar aún (manteniendo la opacidad en 0)
     modal.style.display = "flex";
-    
+
     // Esperar un pequeño intervalo antes de agregar la clase 'show' para activar la animación
     setTimeout(function () {
         modal.classList.add("show");
@@ -28,7 +40,6 @@ window.onclick = function(event) {
         }, 300);  // Debe coincidir con la duración de la transición en el CSS
     }
 }
-
 
 // Desplazamiento suave entre secciones
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

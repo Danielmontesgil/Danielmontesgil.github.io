@@ -163,6 +163,24 @@ body {
     transform: translateY(0);  /* Lo coloca en su posición original */
 }
 
+.tech-logos {
+    display: flex;
+    flex-wrap: wrap;  /* Para que los logos se ajusten a varias líneas si es necesario */
+    justify-content: center;
+    margin-top: 15px; /* Espaciado superior */
+}
+
+.tech-logos img {
+    width: 40px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+    margin: 5px; /* Espaciado entre logos */
+    transition: transform 0.3s ease; /* Transición suave para hover */
+}
+
+.tech-logos img:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
 /* About Section (mejora) */
 #about {
     background-color: #f4f4f4;

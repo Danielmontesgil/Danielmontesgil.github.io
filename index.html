@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Daniel Montes Gil | Video Game Developer</title>
+    <title>Daniel Montes de Sanchez Gil | Video Game Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <section id="home">
         <div class="container">
             <h1>Daniel Montes Gil</h1>
+            <h1>Daniel Montes de Sanchez Gil</h1>
             <h2>Video Game Developer | C#, Unity, C++</h2>
             <p>Creating immersive and engaging gaming experiences.</p>
             <a href="#projects" class="cta-button">See My Work</a>
@@ -21,13 +23,13 @@
             <h2>Projects</h2>
             <div class="project-grid">
                 <!-- Project 1 -->
-                <div class="project-card" onclick="openModal('Project Name 1', 'Brief description of the project, technologies used, and role played.', 'https://github.com/Danielmontesgil/project1')">
+                <div class="project-card" onclick="openModal('Project Name 1', 'Brief description of the project, technologies used, and role played.', 'https://github.com/Danielmontesgil/project1', ['ruta/a/logo-unity.png', 'ruta/a/logo-csharp.png', 'ruta/a/logo-cplusplus.png'])">
                     <img src="project1.jpg" alt="Project 1">
                     <h3>Project Name 1</h3>
                     <p>Brief description of the project, technologies used, and role played.</p>
                 </div>
                 <!-- Project 2 -->
-                <div class="project-card" onclick="openModal('Project Name 2', 'Brief description of the project, technologies used, and role played.', 'https://github.com/Danielmontesgil/project2')">
+                <div class="project-card" onclick="openModal('Project Name 2', 'Brief description of the project, technologies used, and role played.', 'https://github.com/Danielmontesgil/project2', ['ruta/a/logo-unity.png', 'ruta/a/logo-csharp.png', 'ruta/a/logo-cplusplus.png'])">
                     <img src="project2.jpg" alt="Project 2">
                     <h3>Project Name 2</h3>
                     <p>Brief description of the project, technologies used, and role played.</p>
@@ -40,6 +42,7 @@
             <h3 id="modalProjectTitle"></h3>
             <p id="modalProjectDescription"></p>
             <a id="modalProjectLink" class="project-link" target="_blank">View on GitHub</a>
+            <div id="modalTechLogos" class="tech-logos"></div>
         </div>
     </div>
     
