@@ -1,28 +1,34 @@
 // Obtener el modal
 var modal = document.getElementById("projectModal");
 
-// Obtener el elemento <span> que cierra el modal
-var span = document.getElementsByClassName("close")[0];
-
 // Función para abrir el modal
 function openModal(title, description, link) {
     document.getElementById("modalProjectTitle").innerText = title;
     document.getElementById("modalProjectDescription").innerText = description;
     document.getElementById("modalProjectLink").href = link;
-    modal.style.display = "flex";  // Cambiar "block" por "flex" para el centrado
-}
 
-// Cuando el usuario hace clic en <span> (x), cierra el modal
-span.onclick = function() {
-    modal.style.display = "none";
+    // Inicialmente, configuramos display flex pero sin mostrar aún (manteniendo la opacidad en 0)
+    modal.style.display = "flex";
+    
+    // Esperar un pequeño intervalo antes de agregar la clase 'show' para activar la animación
+    setTimeout(function () {
+        modal.classList.add("show");
+    }, 10);  // El pequeño retraso permite que la transición se active correctamente
 }
 
 // Cuando el usuario hace clic fuera del modal, lo cierra
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        // Ocultar el modal eliminando la clase 'show'
+        modal.classList.remove("show");
+
+        // Esperar a que la transición finalice antes de cambiar el display
+        setTimeout(function() {
+            modal.style.display = "none";
+        }, 300);  // Debe coincidir con la duración de la transición en el CSS
     }
 }
+
 
 // Desplazamiento suave entre secciones
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

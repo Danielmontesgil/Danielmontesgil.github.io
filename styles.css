@@ -125,7 +125,7 @@ body {
 
 /* Modal Styling */
 .modal {
-    display: none;
+    display: none;  /* Sigue oculto por defecto */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -135,6 +135,15 @@ body {
     background-color: rgba(0,0,0,0.7); /* Fondo semi-transparente */
     justify-content: center;
     align-items: center;
+    opacity: 0;  /* Comienza con opacidad 0 */
+    transform: scale(0.9);  /* Escala ligeramente más pequeña al inicio */
+    transition: opacity 0.3s ease, transform 0.3s ease;  /* Transición suave */
+}
+
+.modal.show {  
+    display: flex;  /* Flex cuando se muestra */
+    opacity: 1;  /* Aparece con opacidad completa */
+    transform: scale(1);  /* Escala a su tamaño normal */
 }
 
 .modal-content {
@@ -144,20 +153,14 @@ body {
     width: 80%;
     max-width: 500px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(-20px); /* Desplazamiento hacia arriba */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Transición para el contenido */
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #FF6347;
+.modal.show .modal-content {
+    opacity: 1;  /* Hace visible el contenido */
+    transform: translateY(0);  /* Lo coloca en su posición original */
 }
 
 /* About Section (mejora) */
