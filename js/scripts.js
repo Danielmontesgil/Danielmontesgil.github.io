@@ -50,3 +50,21 @@ const observer = new IntersectionObserver(entries => {
 animatedElements.forEach(element => {
     observer.observe(element);
 });
+
+
+document.querySelectorAll('.open-modal').forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.getElementById('modal');
+        modal.classList.add('show');
+    });
+});
+
+document.querySelector('.close-modal').addEventListener('click', () => {
+    const modal = document.getElementById('modal');
+    modal.classList.add('hide'); // Añadimos la clase hide para la animación de salida
+
+    // Espera el tiempo de la animación antes de eliminar el modal
+    setTimeout(() => {
+        modal.classList.remove('show', 'hide');
+    }, 300); // Asegúrate de que coincida con la duración de la transición en CSS
+});
