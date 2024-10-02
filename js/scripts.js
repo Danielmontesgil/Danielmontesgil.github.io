@@ -85,3 +85,6 @@ projectCards.forEach((card, index) => {
     card.style.animationDelay = `${(index + 5) * 0.2}s`;
     projectObserver.observe(card);
 });
+
+ // Obtener el año actual dinámicamente
+ document.getElementById('currentYear').textContent = new Date().getFullYear();
