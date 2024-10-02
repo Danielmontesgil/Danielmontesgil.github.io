@@ -246,22 +246,29 @@ body {
     gap: 20px;
 }
 
+.contact-button img {
+    width: 50px;  /* Ajusta el tamaño del ícono */
+    height: 50px;
+    transition: transform 0.3s ease;  /* Efecto al hacer hover */
+}
+
+.contact-button img:hover {
+    transform: scale(1.1);  /* Agranda ligeramente el ícono al hacer hover */
+}
+
+/* Puedes ajustar el padding de los enlaces si fuera necesario */
 .contact-button {
-    padding: 15px 30px;
-    background-color: #FF6347;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent; /* Fondo transparente para el icono */
+    border-radius: 50%;
     transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-    background-color: #ff4f33;
-}
-
-.contact-links a {
-    display: inline-block;
+    background-color: rgba(255, 99, 71, 0.2);  /* Efecto hover suave alrededor del ícono */
 }
 
 /* Animaciones */
