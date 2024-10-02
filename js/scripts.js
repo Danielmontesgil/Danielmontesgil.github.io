@@ -52,18 +52,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efecto de aparición al hacer scroll
-const animatedElements = document.querySelectorAll('.animated');
+// Efecto de aparición al hacer scroll en secciones con clase .animated
+const animatedSections = document.querySelectorAll('.animated');
 
-const observer = new IntersectionObserver(entries => {
+const sectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in-up');
-            observer.unobserve(entry.target); // Deja de observar una vez que ha aparecido
+            sectionObserver.unobserve(entry.target); // Deja de observar una vez que ha aparecido
         }
     });
 }, { threshold: 0.1 });
 
-animatedElements.forEach(element => {
-    observer.observe(element);
+animatedSections.forEach(section => {
+    sectionObserver.observe(section);
+});
+
+// Efecto de aparición al hacer scroll en proyectos
+const projectCards = document.querySelectorAll('.project-card');
+
+const projectObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-up');
+            projectObserver.unobserve(entry.target); // Deja de observar una vez que ha aparecido
+        }
+    });
+}, { threshold: 0.1 });
+
+projectCards.forEach((card, index) => {
+    // Ajusta la animación de cada proyecto con un retraso basado en su índice
+    card.style.animationDelay = `${(index + 5) * 0.2}s`;
+    projectObserver.observe(card);
 });

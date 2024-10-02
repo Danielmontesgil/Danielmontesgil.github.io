@@ -83,7 +83,30 @@ body {
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    opacity: 0; /* Inicialmente oculto para la animación */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
 }
+
+/* Animación de entrada */
+.fade-in-up {
+    animation: fadeInUp 0.5s forwards; /* Aplica la animación cuando se añade la clase */
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Hace visible el proyecto */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}
+
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
 
 .project-card img {
     width: 100%;
