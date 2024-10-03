@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -83,23 +83,31 @@ body {
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    opacity: 0; /* Inicialmente oculto para la animación */
-    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-/* Animación de entrada */
-.fade-in-up {
-    animation: fadeInUp 0.5s forwards; /* Aplica la animación cuando se añade la clase */
-}
-
-/* Animación de entrada */
+/* Animaciones */
 @keyframes fadeInUp {
-    to {
-        opacity: 1; /* Hace visible el proyecto */
-        transform: translateY(0); /* Regresa a su posición original */
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+/* Animación para las secciones generales */
+.animated.fade-in-up-section {
+    animation: fadeInUp 0.5s forwards;
+}
+
+/* Animación para las tarjetas de proyectos */
+.project-card.fade-in-up-card {
+    animation: fadeInUp 0.5s forwards;
+}
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
@@ -142,31 +150,31 @@ body {
 
 .project-card:hover {
     transform: scale(1.05);
-    background-color: #e0e0e0; /* Cambio de color al hacer hover */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra aumentada */
+    background-color: #e0e0e0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Modal Styling */
 .modal {
-    display: none;  /* Sigue oculto por defecto */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /* Fondo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    opacity: 0;  /* Comienza con opacidad 0 */
-    transform: scale(0.9);  /* Escala ligeramente más pequeña al inicio */
-    transition: opacity 0.3s ease, transform 0.3s ease;  /* Transición suave */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.modal.show {  
-    display: flex;  /* Flex cuando se muestra */
-    opacity: 1;  /* Aparece con opacidad completa */
-    transform: scale(1);  /* Escala a su tamaño normal */
+.modal.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .modal-content {
@@ -177,34 +185,39 @@ body {
     max-width: 500px;
     text-align: center;
     opacity: 0;
-    transform: translateY(-20px); /* Desplazamiento hacia arriba */
-    transition: opacity 0.4s ease, transform 0.4s ease; /* Transición para el contenido */
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .modal.show .modal-content {
-    opacity: 1;  /* Hace visible el contenido */
-    transform: translateY(0);  /* Lo coloca en su posición original */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .tech-logos {
     display: flex;
-    flex-wrap: wrap;  /* Para que los logos se ajusten a varias líneas si es necesario */
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 15px; /* Espaciado superior */
+    margin-top: 15px;
 }
 
 .tech-logos img {
-    width: 40px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantiene la proporción */
-    margin: 5px; /* Espaciado entre logos */
-    transition: transform 0.3s ease; /* Transición suave para hover */
+    width: 40px;
+    height: auto;
+    margin: 5px;
+    transition: transform 0.3s ease;
 }
 
 .tech-logos img:hover {
-    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    transform: scale(1.1);
 }
 
-/* About Section (mejora) */
+/* Clase para bloquear el scroll */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* About Section */
 #about {
     background-color: #f4f4f4;
     padding: 60px 20px;
@@ -215,7 +228,7 @@ body {
     font-size: 2.8rem;
     margin-bottom: 30px;
     color: #333;
-    font-family: 'Poppins', sans-serif; /* O alguna fuente más elegante */
+    font-family: 'Poppins', sans-serif;
 }
 
 .about-content {
@@ -239,10 +252,10 @@ body {
     float: left;
     margin-right: 20px;
     border-radius: 50%;
-    width: 150px; /* Puedes agregar una imagen tuya o un icono */
+    width: 150px;
 }
 
-/* Contact Section (mejora) */
+/* Contact Section */
 #contact {
     background-color: #333;
     color: #fff;
@@ -253,7 +266,7 @@ body {
 #contact h2 {
     font-size: 2.8rem;
     margin-bottom: 30px;
-    font-family: 'Poppins', sans-serif; /* Consistencia con la fuente */
+    font-family: 'Poppins', sans-serif;
     color: #FF6347;
 }
 
@@ -270,28 +283,27 @@ body {
 }
 
 .contact-button img {
-    width: 50px;  /* Ajusta el tamaño del ícono */
+    width: 50px;
     height: 50px;
-    transition: transform 0.3s ease;  /* Efecto al hacer hover */
+    transition: transform 0.3s ease;
 }
 
 .contact-button img:hover {
-    transform: scale(1.1);  /* Agranda ligeramente el ícono al hacer hover */
+    transform: scale(1.1);
 }
 
-/* Puedes ajustar el padding de los enlaces si fuera necesario */
 .contact-button {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: transparent; /* Fondo transparente para el icono */
+    background-color: transparent;
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-    background-color: rgb(255, 255, 255);  /* Efecto hover suave alrededor del ícono */
+    background-color: rgb(255, 255, 255);
 }
 
 /* Footer */
@@ -308,43 +320,6 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-
-/* Animaciones */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animated {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.fade-in-up {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 1;
-}
-
-/* Opcional: Agrega un retardo para las tarjetas de proyecto */
-.project-card {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-}
-
-.project-card:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.project-card:nth-child(2) {
-    animation-delay: 0.4s;
 }
 
 /* Responsive Styling */
