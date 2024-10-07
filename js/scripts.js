@@ -5,7 +5,6 @@ var modal = document.getElementById("projectModal");
 function openModal(project) {
     document.getElementById("modalProjectTitle").innerText = project.title;
     document.getElementById("modalProjectDescription").innerText = project.description;
-    document.getElementById("modalProjectLink").href = project.link;
 
     const techLogosContainer = document.getElementById("modalTechLogos");
     techLogosContainer.innerHTML = ''; // Limpiar logos anteriores
@@ -29,6 +28,21 @@ function openModal(project) {
         responsibilitiesList.appendChild(li);
     });
 
+    // Mostrar o ocultar la sección del enlace de GitHub
+    const projectLinkContainer = document.getElementById("modalLinkContainer");
+    if (project.link) {
+        projectLinkContainer.style.display = "block"; // Mostrar la sección completa
+        document.getElementById("modalProjectLink").href = project.link; // Asignar enlace
+
+        // Añadir la clase 'modal-section' si hay enlace
+        techLogosContainer.classList.add("modal-section");
+    } else {
+        projectLinkContainer.style.display = "none"; // Ocultar toda la sección si no hay enlace
+
+        // Quitar la clase 'modal-section' si no hay enlace
+        techLogosContainer.classList.remove("modal-section");
+    }
+
     // Mostrar el modal
     modal.style.display = "flex";
     document.body.classList.add('no-scroll');
@@ -38,28 +52,32 @@ function openModal(project) {
     }, 10);
 }
 
-// Función para cargar los proyectos desde el archivo JSON
+// Función para cargar los proyectos desde el archivo JSON y rellenar las tarjetas existentes
 function loadProjects() {
     fetch('src/docs/projects.json')
         .then(response => response.json())
         .then(data => {
-            const projectsGrid = document.querySelector('.project-grid');
+            const projectCards = document.querySelectorAll('.project-card');
 
-            data.forEach((project, index) => {
-                const projectCard = document.createElement('div');
-                projectCard.classList.add('project-card');
-                projectCard.innerHTML = `
-                    <img src="src/icons/${project.gallery[0]}" alt="${project.title}">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                `;
+            projectCards.forEach(card => {
+                const projectId = card.getAttribute('data-id');
+                const projectData = data[projectId];
 
-                // Asignar evento de click para abrir el modal
-                projectCard.onclick = function() {
-                    openModal(project);
-                };
+                if (projectData) {
+                    const imgElement = card.querySelector('img');
+                    const titleElement = card.querySelector('h3');
+                    const descriptionElement = card.querySelector('p');
 
-                projectsGrid.appendChild(projectCard);
+                    imgElement.src = `src/icons/${projectData.gallery[0]}`; 
+                    imgElement.alt = projectData.title;
+                    titleElement.innerText = projectData.title;
+                    descriptionElement.innerText = projectData.description;
+
+                    // Asignar evento para abrir el modal al hacer clic en la tarjeta
+                    card.onclick = function() {
+                        openModal(projectData);
+                    };
+                }
             });
         })
         .catch(error => console.error('Error loading projects:', error));

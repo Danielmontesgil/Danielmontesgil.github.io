@@ -1,94 +1,90 @@
-{
-    "projects": [
-        {
-            "title": "Master Bounce",
-            "description": "Master Bounce is a frenetic mobile game with +100 levels of pure adrenaline.#In this game you are in a closed room where there are tons of enemies and you have to protect your base.#Everything is customizable and you can buy a lot of skins just playing the game. All this game was based and load throught Playfab.# My role in this game was Game Programmer, Core Game Architecture, Backend Architecture and Implementation Implementation, Ad Integrations Programmer.",
-            "link": "",
-            "responsabilities": "",
-            "tools": [
-                "unity",
-                "c#",
-                "playfab"
-            ],
-            "gallery": [
-                "MasterBounce",
-                "MasterBounce1",
-                "MasterBounce2"
-            ]
-        },
-        {
-            "title": "Project Blue Book: Hidden Mysteries",
-            "description": "Project Blue Book The Game: Hidden Mysteries is the official, mobile free-to-play, hidden object adventure game based on HISTORY’s hit drama series PROJECT BLUE BOOK.#My role in this game was Game Programmer, Backend Programmer, Data Analysis, Quests Architecture and Implementation, Item Reward Retention System Implementation.",
-            "link": "",
-            "tools": [
-                "unity",
-                "c#",
-                "playfab"
-            ],
-            "gallery": [
-                "Pbb",
-                "Pbb1",
-                "Pbb3"
-            ]
-        },
-        {
-            "title": "Hobo Fight",
-            "description": "Hobo fight was born in the Global Game Jam (2019) after the event we continue working on it and it became Indie Prize finalist Los Angeles, USA (2019).#Hobo Fight! is a king of the hill game which allows hobos to fight each other. The more time you spend inside the house, the closer you are to transform it into your home.#In this crazy game, you and your friends become a Hobo, so you can do everything that comes with it...like throwing things, drinking unknown liquids and trying a pair of worn out shoes.",
-            "link": "",
-            "tools": [
-                "unity",
-                "c#"
-            ],
-            "gallery": [
-                "Hobo",
-                "Hobo2",
-                "Hobo3"
-            ]
-        },
-        {
-            "title": "The Cave VR",
-            "description": "The Cave VR is a single player game for cardboard and Samsumg Gear VR. It´s a survival where you need to escape from a danger cave.#The game revolves around the person who has to find the way to escape from this dangerous cave, to do that he needs to hear waters drops and collect chests.#My role for the game was a programmer, I worked on all gameplay mechanics.",
-            "link": "",
-            "tools": [
-                "unity",
-                "c#",
-                "cardboard"
-            ],
-            "gallery": [
-                "TheCave",
-                "TheCave1",
-                "TheCave2",
-                "TheCave3"
-            ]
-        },
-        {
-            "title": "La Colina",
-            "description": "La Colina is a 2D tower defense game for mobile. It is a game where you need to protect cows from aliens' attack.#In this game you put different types of cows to protect the queen, harvest milk, shoot to aliens and protect the cows.#My role in this project was programmer, I worked on cow´s mechanics like attacks, move, deaths and interactions with aliens.",
-            "link": "",
-            "tools": [
-                "unity",
-                "c#"
-            ],
-            "gallery": [
-                "LaColina",
-                "LaColina1",
-                "LaColina2"
-            ],
-            "video": "LaColina"
-        },
-        {
-            "title": "Taxi Vs Uber",
-            "description": "Taxis Vs Ubers is a local multiplayer game for Pc. It can play with keyboard or joysticks.#Challenge your friends to know who is the best driver, carry passengers, drive quickly and get a lot of money.#My role in this game was lead developer, I worked on all gameplays mechanics, carry passengers, money, crashes and time.",
-            "link": "",
-            "tools": [
-                "unity",
-                "c#"
-            ],
-            "gallery": [
-                "TvU",
-                "TvU1",
-                "TvU2"
-            ]
-        }
-    ]
-}
+[
+    {
+        "title": "Zynga ZDK",
+        "description": "Master Bounce is a frenetic mobile game with +100 levels of pure adrenaline.#In this game you are in a closed room where there are tons of enemies and you have to protect your base.#Everything is customizable and you can buy a lot of skins just playing the game. All this game was based and load throught Playfab.# My role in this game was Game Programmer, Core Game Architecture, Backend Architecture and Implementation Implementation, Ad Integrations Programmer.",
+        "link": "",
+        "responsibilities": [
+            "Designed and implemented a solution using reflection to keep a memory profiler package working after an update that made some classes internal.",
+            "Added unit tests in memory profiler to verify data consistency.",
+            "Worked with Zynga stakeholders to architect and implement new functionality to distribute Zynga's core game engine inside Unity, speeding up installation and usage by an average of 50%.",
+            "Developed common NuGet library using NuGet.Protocol to distribute Zynga's core game engine.",
+            "Developed a system utilizing Zynga's track API to conduct comprehensive analytics on the new distribution functionality.",
+            "Implement, maintain and review reliable code using C#.",
+            "Increased Code Coverage in 5% using UnitTest in Unity.",
+            "Perform builds, tests, and other basic CI/CD tasks using Jenkins."
+        ],
+        "tools": [
+            "unity-icon.svg",
+            "c-sharp-icon.svg"
+        ],
+        "gallery": [
+            "zynga-icon.png"
+        ]
+    },
+    {
+        "title": "Globant VR",
+        "description": "Project Blue Book The Game: Hidden Mysteries is the official, mobile free-to-play, hidden object adventure game based on HISTORY’s hit drama series PROJECT BLUE BOOK.#My role in this game was Game Programmer, Backend Programmer, Data Analysis, Quests Architecture and Implementation, Item Reward Retention System Implementation.",
+        "link": "",
+        "responsibilities": [],
+        "tools": [
+            "unity",
+            "c#"
+        ],
+        "gallery": [
+            "globant-icon.jpg"
+        ]
+    },
+    {
+        "title": "Glu Mobile",
+        "description": "Hobo fight was born in the Global Game Jam (2019) after the event we continue working on it and it became Indie Prize finalist Los Angeles, USA (2019).#Hobo Fight! is a king of the hill game which allows hobos to fight each other. The more time you spend inside the house, the closer you are to transform it into your home.#In this crazy game, you and your friends become a Hobo, so you can do everything that comes with it...like throwing things, drinking unknown liquids and trying a pair of worn out shoes.",
+        "link": "",
+        "responsibilities": [],
+        "tools": [
+            "unity",
+            "c#"
+        ],
+        "gallery": [
+            "glu-icon.png"
+        ]
+    },
+    {
+        "title": "Hobbo Fight",
+        "description": "The Cave VR is a single player game for cardboard and Samsumg Gear VR. It´s a survival where you need to escape from a danger cave.#The game revolves around the person who has to find the way to escape from this dangerous cave, to do that he needs to hear waters drops and collect chests.#My role for the game was a programmer, I worked on all gameplay mechanics.",
+        "link": "",
+        "responsibilities": [],
+        "tools": [
+            "unity",
+            "c#"
+        ],
+        "gallery": [
+            "hobbo-fight-icon.png"
+        ]
+    },
+    {
+        "title": "Rival Stars Basketball",
+        "description": "La Colina is a 2D tower defense game for mobile. It is a game where you need to protect cows from aliens' attack.#In this game you put different types of cows to protect the queen, harvest milk, shoot to aliens and protect the cows.#My role in this project was programmer, I worked on cow´s mechanics like attacks, move, deaths and interactions with aliens.",
+        "link": "",
+        "responsibilities": [],
+        "tools": [
+            "unity",
+            "c#"
+        ],
+        "gallery": [
+            "rivals-icon.png"
+        ],
+        "video": "LaColina"
+    },
+    {
+        "title": "Project 6",
+        "description": "Taxis Vs Ubers is a local multiplayer game for Pc. It can play with keyboard or joysticks.#Challenge your friends to know who is the best driver, carry passengers, drive quickly and get a lot of money.#My role in this game was lead developer, I worked on all gameplays mechanics, carry passengers, money, crashes and time.",
+        "link": "",
+        "responsibilities": [],
+        "tools": [
+            "unity",
+            "c#"
+        ],
+        "gallery": [
+            "zynga-icon.png"
+        ]
+    }
+]
