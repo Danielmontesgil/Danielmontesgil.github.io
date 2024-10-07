@@ -10,9 +10,9 @@ function openModal(project) {
     techLogosContainer.innerHTML = ''; // Limpiar logos anteriores
 
     // Añadir logos de tecnologías
-    project.techLogos.forEach(logo => {
+    project.tools.forEach(logo => {
         const img = document.createElement('img');
-        img.src = logo;
+        img.src = `src/icons/${logo}`;
         img.alt = "Technology Logo";
         techLogosContainer.appendChild(img);
     });
@@ -85,7 +85,6 @@ function loadProjects() {
 
 // Cargar los proyectos cuando la página esté lista
 document.addEventListener('DOMContentLoaded', loadProjects);
-
 
 // Cerrar modal al hacer clic fuera de él
 window.onclick = function (event) {

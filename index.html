@@ -62,10 +62,28 @@
     </section>
     <div id="projectModal" class="modal">
         <div class="modal-content">
-            <h3 id="modalProjectTitle"></h3>
-            <p id="modalProjectDescription"></p>
-            <a id="modalProjectLink" class="project-link" target="_blank">View on GitHub</a>
-            <div id="modalTechLogos" class="tech-logos"></div>
+            <!-- Cabecera del modal con título centrado -->
+            <div class="modal-header">
+                <h3 id="modalProjectTitle" class="modal-title"></h3>
+            </div>
+            <!-- Cuerpo del modal con descripción y responsabilidades -->
+            <div class="modal-body">
+                <!-- Descripción del proyecto -->
+                <div class="modal-section">
+                    <p id="modalProjectDescription"></p>
+                </div>
+                <!-- Responsabilidades (sin colapsar, siempre visibles) -->
+                <div class="modal-section">
+                    <h4>Responsibilities</h4>
+                    <ul id="modalResponsibilities" class="responsibilities-list"></ul>
+                </div>
+                <!-- Logos de tecnologías usadas -->
+                <div id="modalTechLogos" class="tech-logos"></div>
+            </div>
+            <!-- Pie de página con enlace al proyecto -->
+            <div id="modalLinkContainer" class="modal-footer">
+                <a id="modalProjectLink" class="project-link" target="_blank">View on GitHub</a>
+            </div>
         </div>
     </div>
     <section id="about" class="animated">
