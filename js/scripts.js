@@ -2,21 +2,34 @@
 var modal = document.getElementById("projectModal");
 
 // Función para abrir el modal
-function openModal(title, description, link, techLogos) {
-    document.getElementById("modalProjectTitle").innerText = title;
-    document.getElementById("modalProjectDescription").innerText = description;
-    document.getElementById("modalProjectLink").href = link;
+function openModal(project) {
+    document.getElementById("modalProjectTitle").innerText = project.title;
+    document.getElementById("modalProjectDescription").innerText = project.description;
+    document.getElementById("modalProjectLink").href = project.link;
 
     const techLogosContainer = document.getElementById("modalTechLogos");
     techLogosContainer.innerHTML = ''; // Limpiar logos anteriores
 
-    techLogos.forEach(logo => {
+    // Añadir logos de tecnologías
+    project.techLogos.forEach(logo => {
         const img = document.createElement('img');
         img.src = logo;
         img.alt = "Technology Logo";
         techLogosContainer.appendChild(img);
     });
 
+    // Limpiar responsabilidades anteriores
+    const responsibilitiesList = document.getElementById("modalResponsibilities");
+    responsibilitiesList.innerHTML = '';
+
+    // Añadir responsabilidades
+    project.responsibilities.forEach(responsibility => {
+        const li = document.createElement('li');
+        li.innerText = responsibility;
+        responsibilitiesList.appendChild(li);
+    });
+
+    // Mostrar el modal
     modal.style.display = "flex";
     document.body.classList.add('no-scroll');
 
@@ -24,6 +37,37 @@ function openModal(title, description, link, techLogos) {
         modal.classList.add("show");
     }, 10);
 }
+
+// Función para cargar los proyectos desde el archivo JSON
+function loadProjects() {
+    fetch('src/docs/projects.json')
+        .then(response => response.json())
+        .then(data => {
+            const projectsGrid = document.querySelector('.project-grid');
+
+            data.forEach((project, index) => {
+                const projectCard = document.createElement('div');
+                projectCard.classList.add('project-card');
+                projectCard.innerHTML = `
+                    <img src="src/icons/${project.gallery[0]}" alt="${project.title}">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                `;
+
+                // Asignar evento de click para abrir el modal
+                projectCard.onclick = function() {
+                    openModal(project);
+                };
+
+                projectsGrid.appendChild(projectCard);
+            });
+        })
+        .catch(error => console.error('Error loading projects:', error));
+}
+
+// Cargar los proyectos cuando la página esté lista
+document.addEventListener('DOMContentLoaded', loadProjects);
+
 
 // Cerrar modal al hacer clic fuera de él
 window.onclick = function (event) {
