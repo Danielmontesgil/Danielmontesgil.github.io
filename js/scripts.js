@@ -86,17 +86,27 @@ function loadProjects() {
 // Cargar los proyectos cuando la página esté lista
 document.addEventListener('DOMContentLoaded', loadProjects);
 
+function closeModal() {
+    modal.classList.remove("show");
+    document.body.classList.remove('no-scroll');
+
+    setTimeout(function () {
+        modal.style.display = "none";
+    }, 300);
+}
+
 // Cerrar modal al hacer clic fuera de él
 window.onclick = function (event) {
     if (event.target == modal) {
-        modal.classList.remove("show");
-        document.body.classList.remove('no-scroll');
-
-        setTimeout(function () {
-            modal.style.display = "none";
-        }, 300);
+        closeModal();
     }
 };
+
+window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
 
 // Desplazamiento suave entre secciones
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
