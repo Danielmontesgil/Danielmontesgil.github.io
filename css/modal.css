@@ -24,7 +24,7 @@
 /* Modal Content - Cambiado a un modal más ancho */
 .modal-content {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     width: 90%;
     max-width: 800px;
@@ -32,6 +32,8 @@
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
+    overflow-y: auto;
+    max-height: 80vh;
 }
 
 .modal.show .modal-content {
@@ -42,7 +44,7 @@
 /* Título centrado */
 .modal-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
 }
@@ -56,7 +58,7 @@
     text-align: justify;
     margin-bottom: 20px;
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .modal-section {
@@ -67,7 +69,7 @@
 
 /* Responsabilidades */
 .modal-section h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     color: #444;
 }
@@ -80,7 +82,7 @@
 
 .responsibilities-list li {
     margin-bottom: 8px;
-    font-size: 1.1rem;  /* Ajustamos el tamaño de fuente para hacer el texto más agradable */
+    font-size: 1rem;  /* Ajustamos el tamaño de fuente para hacer el texto más agradable */
     color: #555;
 }
 
@@ -93,7 +95,7 @@
 }
 
 .tech-logos img {
-    width: 50px;  /* Ajustado tamaño para que los logos sean más visibles */
+    width: 40px;  /* Ajustado tamaño para que los logos sean más visibles */
     height: auto;
     margin: 8px;
     transition: transform 0.3s ease;

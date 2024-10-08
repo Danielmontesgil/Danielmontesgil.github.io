@@ -12,6 +12,10 @@
         font-size: 1rem;
     }
 
+    .modal-content {
+        max-height: 80vh; /* Altura máxima para el modal en móviles */
+    }
+
     .cta-button {
         font-size: 1rem;
         padding: 8px 20px;
@@ -29,5 +33,31 @@
 
     #home p {
         font-size: 0.9rem;
+    }
+
+    /* Estilos para el modal */
+    .modal-content {
+        padding: 15px; /* Reducir el padding en móviles */
+        max-height: 80vh; /* Altura máxima para el modal en móviles */
+    }
+
+    .modal-title {
+        font-size: 1.5rem; /* Ajustar tamaño del título */
+    }
+
+    #modalProjectDescription {
+        font-size: 0.9rem; /* Ajustar tamaño de la descripción */
+    }
+
+    .modal-section h4 {
+        font-size: 1.2rem; /* Ajustar tamaño de encabezados de secciones */
+    }
+
+    .responsibilities-list li {
+        font-size: 0.9rem; /* Ajustar tamaño de texto de las responsabilidades */
+    }
+
+    .tech-logos img {
+        width: 30px; /* Reducir tamaño de logos */
     }
 }
