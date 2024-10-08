@@ -1,0 +1,129 @@
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Modal Content - Cambiado a un modal más ancho */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Título centrado */
+.modal-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Body */
+.modal-body {
+    margin-top: 15px;
+}
+
+#modalProjectDescription {
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.modal-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsabilidades */
+.modal-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.responsibilities-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.responsibilities-list li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;  /* Ajustamos el tamaño de fuente para hacer el texto más agradable */
+    color: #555;
+}
+
+/* Tech Logos */
+.tech-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.tech-logos img {
+    width: 50px;  /* Ajustado tamaño para que los logos sean más visibles */
+    height: auto;
+    margin: 8px;
+    transition: transform 0.3s ease;
+}
+
+.tech-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.modal-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #FF6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #ff4f33;
+}
+
+/* Clase para bloquear el scroll */
+.no-scroll {
+    overflow: hidden;
+}

@@ -1,0 +1,37 @@
+/* About Section */
+#about {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: left;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+    margin-bottom: 10px;
+}
+
+.about-content img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 150px;
+}

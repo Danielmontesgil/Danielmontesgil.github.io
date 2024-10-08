@@ -1,0 +1,83 @@
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-card img {
+    width: 200px;  /* Esto ajustará la imagen para que ocupe el ancho completo del contenedor */
+    height: 200px; /* Mantiene la proporción original de la imagen */
+    object-fit: contain; /* Esto asegura que la imagen se ajuste sin recortar */
+    border-radius: 15px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Un poco de espacio entre la imagen y el título */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.project-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para las secciones generales */
+.animated.fade-in-up-section {
+    animation: fadeInUp 0.5s forwards;
+}
+
+/* Animación para las tarjetas de proyectos */
+.project-card.fade-in-up-card {
+    animation: fadeInUp 0.5s forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
