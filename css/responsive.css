@@ -20,6 +20,20 @@
         font-size: 1rem;
         padding: 8px 20px;
     }
+
+    .modal-section h4 {
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .modal-section h4:hover {
+        text-decoration: underline;  /* Añadimos un pequeño cambio visual al pasar el cursor */
+    }
+
+    /* Ocultar la lista de responsabilidades inicialmente */
+    .responsibilities-list {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -51,6 +65,8 @@
 
     .modal-section h4 {
         font-size: 1.2rem; /* Ajustar tamaño de encabezados de secciones */
+        cursor: pointer;
+        display: inline-block;
     }
 
     .responsibilities-list li {
@@ -59,5 +75,11 @@
 
     .tech-logos img {
         width: 30px; /* Reducir tamaño de logos */
+    }
+}
+
+@media (min-width: 769px) {
+    .responsibilities-list {
+        display: block;  /* Las responsabilidades siempre estarán visibles en pantallas grandes */
     }
 }
