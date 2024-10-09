@@ -21,15 +21,6 @@
         padding: 8px 20px;
     }
 
-    .modal-section h4 {
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .modal-section h4:hover {
-        text-decoration: underline;  /* Añadimos un pequeño cambio visual al pasar el cursor */
-    }
-
     /* Ocultar la lista de responsabilidades inicialmente */
     .responsibilities-list {
         display: none;
@@ -65,8 +56,6 @@
 
     .modal-section h4 {
         font-size: 1.2rem; /* Ajustar tamaño de encabezados de secciones */
-        cursor: pointer;
-        display: inline-block;
     }
 
     .responsibilities-list li {
