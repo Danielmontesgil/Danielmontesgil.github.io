@@ -83,6 +83,36 @@ function loadProjects() {
         .catch(error => console.error('Error loading projects:', error));
 }
 
+// Función para alternar la visibilidad de las responsabilidades al hacer clic en el título
+function toggleResponsibilities() {
+    const responsibilitiesList = document.getElementById("modalResponsibilities");
+
+    if (responsibilitiesList.style.display === "none" || responsibilitiesList.style.display === "") {
+        responsibilitiesList.style.display = "block";
+    } else {
+        responsibilitiesList.style.display = "none";
+    }
+}
+
+// Función para inicializar el estado de la lista de responsabilidades según el dispositivo
+function initializeResponsibilities() {
+    const responsibilitiesList = document.getElementById("modalResponsibilities");
+    const responsibilitiesTitle = document.querySelector(".modal-section h4");
+
+    // Comprobamos si estamos en móvil (pantalla pequeña) o en escritorio (pantalla grande)
+    if (window.innerWidth <= 768) {
+        responsibilitiesList.style.display = "none";  // Ocultamos responsabilidades en móviles
+        responsibilitiesTitle.addEventListener('click', toggleResponsibilities);  // Añadimos el evento solo en móvil
+    } else {
+        responsibilitiesList.style.display = "block";  // Mostramos siempre las responsabilidades en escritorio
+        responsibilitiesTitle.innerText = "Responsabilidades";  // Título normal en escritorio
+    }
+}
+
+// Llamamos a la función de inicialización cuando la página esté lista
+document.addEventListener('DOMContentLoaded', initializeResponsibilities);
+
+
 // Cargar los proyectos cuando la página esté lista
 document.addEventListener('DOMContentLoaded', loadProjects);
 
