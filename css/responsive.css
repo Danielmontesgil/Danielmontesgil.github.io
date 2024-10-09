@@ -21,6 +21,17 @@
         padding: 8px 20px;
     }
 
+    .modal-section h4 {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para darle algo de profundidad */
+        padding: 10px 15px;
+        border-radius: 8px;  /* Un poco de borde redondeado para hacer que parezca un botón */
+        text-decoration: underline; /* Dejamos la subrayado al pasar el ratón en pantallas grandes */
+    }
+
+    .modal-section h4:active {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Un pequeño cambio al hacer clic para darle sensación de interactividad */
+    }
+
     /* Ocultar la lista de responsabilidades inicialmente */
     .responsibilities-list {
         display: none;
@@ -71,4 +82,10 @@
     .responsibilities-list {
         display: block;  /* Las responsabilidades siempre estarán visibles en pantallas grandes */
     }
+
+    .modal-section h4 {
+        text-decoration: none; /* Eliminamos subrayado */
+        box-shadow: none; /* Sin sombra en escritorio */
+    }
+
 }

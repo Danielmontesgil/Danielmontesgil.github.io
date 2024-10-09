@@ -72,14 +72,16 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #444;
+    display: inline-block;
+    transition: box-shadow 0.3s ease; /* Añadimos una transición suave para la sombra */
 }
 
 .responsibilities-list {
     list-style-type: disc;
     margin-left: 20px;
     text-align: justify;
-    display: none;  /* Ocultamos las responsabilidades inicialmente en dispositivos móviles */
-}
+    display: none;  /* Ocultamos las responsabilidades inicialmente en móviles */
+}   
 
 /* Tech Logos */
 .tech-logos {
