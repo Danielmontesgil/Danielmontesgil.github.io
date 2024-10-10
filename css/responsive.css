@@ -28,6 +28,35 @@
         text-decoration: underline; /* Dejamos la subrayado al pasar el ratón en pantallas grandes */
     }
 
+    .gallery-container {
+        max-width: 230px;
+    }
+
+    .gallery-slides img {
+        max-width: 230px; /* Limita el tamaño máximo de las imágenes */
+    }
+
+    /* Botones de navegación */
+    .prev-btn, .next-btn {
+        padding: 5px;
+        min-width: 30px; 
+        min-height: 30px;
+    }
+
+    /* Colocamos los botones en los laterales del contenedor del modal */
+    .prev-btn {
+        left: -5px; /* Ajusta el margen izquierdo según sea necesario */
+    }
+
+    .next-btn {
+        right: -5px; /* Ajusta el margen derecho según sea necesario */
+    }
+
+    /* Aumentar el tamaño del texto dentro de los botones */
+    .prev-btn:before, .next-btn:before {
+        font-size: 1rem; /* Aumenta el tamaño del ícono de flecha si es necesario */
+    }
+
     .modal-section h4:active {
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Un pequeño cambio al hacer clic para darle sensación de interactividad */
     }
