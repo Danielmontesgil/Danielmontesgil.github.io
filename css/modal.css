@@ -49,6 +49,81 @@
     margin-bottom: 20px;
 }
 
+/* Galería */
+.modal-gallery {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none; /* Ocultamos la galería por defecto */
+    width: 100%;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center; /* Centra el contenedor de la galería */
+    width: 100%;  /* Asegura que ocupe todo el ancho del modal */
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto; /* Esto asegura que el contenedor esté centrado */
+}
+
+/* Este contenedor debe alinear las imágenes en fila horizontal */
+.gallery-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio */
+}
+
+/* Imágenes del carrusel */
+.gallery-slides img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el espacio disponible */
+    max-width: 500px; /* Limita el tamaño máximo de las imágenes */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* Botones de navegación */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    /* Cambiar el tamaño de los botones */
+    min-width: 40px; 
+    min-height: 40px;
+}
+
+/* Colocamos los botones en los laterales del contenedor del modal */
+.prev-btn {
+    left: 60px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+.next-btn {
+    right: 60px; /* Ajusta el margen derecho según sea necesario */
+}
+
+/* Aumentar el tamaño del texto dentro de los botones */
+.prev-btn:before, .next-btn:before {
+    font-size: 1.5rem; /* Aumenta el tamaño del ícono de flecha si es necesario */
+}
+
+/* Opcional: Agregar un poco de sombra a los botones para mejor visibilidad */
+.prev-btn, .next-btn {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 /* Body */
 .modal-body {
     margin-top: 15px;

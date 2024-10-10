@@ -50,6 +50,33 @@ function openModal(project) {
     setTimeout(function () {
         modal.classList.add("show");
     }, 10);
+
+    const gallerySection = document.querySelector('.modal-gallery');  // Sección de la galería
+    const gallerySlidesContainer = document.querySelector('.gallery-slides');
+    gallerySlidesContainer.innerHTML = ''; // Limpiar las imágenes anteriores
+
+    // Obtener la lista de imágenes sin el primer ícono
+    const galleryImages = project.gallery.slice(1); 
+
+    // Si hay imágenes adicionales, mostrar la galería
+    if (galleryImages.length > 0) {
+        gallerySection.style.display = 'block'; // Mostrar la galería
+
+        // Añadir imágenes de la galería al modal
+        galleryImages.forEach(imageSrc => {
+            const img = document.createElement('img');
+            img.src = `src/images/${imageSrc}`;  // Asumiendo que las imágenes estén en esta ruta
+            img.alt = "Project image";
+            gallerySlidesContainer.appendChild(img);
+        });
+
+        // Resetear el slide actual
+        currentSlide = 0;
+        moveSlide(0); // Mover al primer slide cuando se abre el modal
+    } else {
+        // Si no hay imágenes, ocultar la galería
+        gallerySection.style.display = 'none';
+    }
 }
 
 // Función para cargar los proyectos desde el archivo JSON y rellenar las tarjetas existentes
@@ -81,6 +108,22 @@ function loadProjects() {
             });
         })
         .catch(error => console.error('Error loading projects:', error));
+}
+
+// Índice actual de la galería
+let currentSlide = 0;
+
+// Función para moverse entre imágenes de la galería
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.gallery-slides img');
+    const totalSlides = slides.length;
+
+    // Calcular el índice de la nueva imagen
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+    // Mover las imágenes
+    const gallerySlides = document.querySelector('.gallery-slides');
+    gallerySlides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
 // Función para alternar la visibilidad de las responsabilidades al hacer clic en el título
