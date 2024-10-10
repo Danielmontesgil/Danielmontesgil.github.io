@@ -29,27 +29,27 @@
     }
 
     .gallery-container {
-        max-width: 230px;
+        max-width: 500px;
     }
 
     .gallery-slides img {
-        max-width: 230px; /* Limita el tamaño máximo de las imágenes */
+        max-width: 500px; /* Limita el tamaño máximo de las imágenes */
     }
 
     /* Botones de navegación */
     .prev-btn, .next-btn {
         padding: 5px;
-        min-width: 30px; 
-        min-height: 30px;
+        min-width: 40px; 
+        min-height: 40px;
     }
 
     /* Colocamos los botones en los laterales del contenedor del modal */
     .prev-btn {
-        left: -5px; /* Ajusta el margen izquierdo según sea necesario */
+        left: 15px; /* Ajusta el margen izquierdo según sea necesario */
     }
 
     .next-btn {
-        right: -5px; /* Ajusta el margen derecho según sea necesario */
+        right: 15px; /* Ajusta el margen derecho según sea necesario */
     }
 
     /* Aumentar el tamaño del texto dentro de los botones */
@@ -96,6 +96,21 @@
 
     .modal-section h4 {
         font-size: 1.2rem; /* Ajustar tamaño de encabezados de secciones */
+    }
+
+    .prev-btn, .next-btn {
+        padding: 5px;
+        min-width: 30px; 
+        min-height: 30px;
+    }
+
+    /* Colocamos los botones en los laterales del contenedor del modal */
+    .prev-btn {
+        left: -5px; /* Ajusta el margen izquierdo según sea necesario */
+    }
+
+    .next-btn {
+        right: -5px; /* Ajusta el margen derecho según sea necesario */
     }
 
     .responsibilities-list li {
