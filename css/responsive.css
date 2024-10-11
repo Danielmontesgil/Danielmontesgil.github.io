@@ -14,6 +14,41 @@
         font-size: 0.9rem;
     }
 
+    #projects h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .project-card {
+        width: 100%; /* Hacer que la tarjeta ocupe todo el ancho de la pantalla */
+        margin: 10px auto; /* Centramos la tarjeta */
+        box-sizing: border-box; /* Aseguramos que el padding se incluya en el tamaño total de la tarjeta */
+    }
+
+    .project-card img {
+        width: 100%; /* La imagen ocupará todo el ancho disponible */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+        margin-top: 15px;
+        color: #333;
+    }
+    
+    .project-card p {
+        margin: 10px 0;
+        font-size: 0.8rem;
+        color: #666;
+    }
+
+    .project-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Espacio entre las tarjetas */
+    }
+
     /* Estilos para el modal */
     .modal-content {
         padding: 15px; /* Reducir el padding en móviles */
@@ -176,7 +211,6 @@
     }
 }
 
-/* Tablets grandes y pantallas medianas-grandes (1025px a 1280px) */
 /* Tablets grandes y pantallas medianas-grandes (1025px a 1280px) */
 @media (min-width: 1025px) and (max-width: 1280px) {
     #home h1 {
