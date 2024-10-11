@@ -1,7 +1,7 @@
 [
     {
         "title": "Zynga ZDK",
-        "description": "Master Bounce is a frenetic mobile game with +100 levels of pure adrenaline.#In this game you are in a closed room where there are tons of enemies and you have to protect your base.#Everything is customizable and you can buy a lot of skins just playing the game. All this game was based and load throught Playfab.# My role in this game was Game Programmer, Core Game Architecture, Backend Architecture and Implementation Implementation, Ad Integrations Programmer.",
+        "description": "Master Bounce is a frenetic mobile game with +100 levels of pure adrenaline.#In this game you are in a closed room where there are tons of enemies and you have to protect your base.#Everything is customizable and you can buy a lot of skins just playing the game.",
         "link": "",
         "responsibilities": [
             "Designed and implemented a solution using reflection to keep a memory profiler package working after an update that made some classes internal.",
@@ -18,12 +18,16 @@
             "c-sharp-icon.svg"
         ],
         "gallery": [
-            "zynga-icon.png"
+            "zynga-icon.png",
+            "Hobo.png",
+            "Hobo1.png",
+            "Hobo2.png",
+            "Hobo3.png"
         ]
     },
     {
         "title": "Globant VR",
-        "description": "Project Blue Book The Game: Hidden Mysteries is the official, mobile free-to-play, hidden object adventure game based on HISTORY’s hit drama series PROJECT BLUE BOOK.#My role in this game was Game Programmer, Backend Programmer, Data Analysis, Quests Architecture and Implementation, Item Reward Retention System Implementation.",
+        "description": "Project Blue Book The Game: Hidden Mysteries is the official, mobile free-to-play, hidden object adventure game based on HISTORY’s hit drama series PROJECT BLUE BOOK.  ",
         "link": "",
         "responsibilities": [],
         "tools": [
@@ -36,7 +40,7 @@
     },
     {
         "title": "Glu Mobile",
-        "description": "Hobo fight was born in the Global Game Jam (2019) after the event we continue working on it and it became Indie Prize finalist Los Angeles, USA (2019).#Hobo Fight! is a king of the hill game which allows hobos to fight each other. The more time you spend inside the house, the closer you are to transform it into your home.#In this crazy game, you and your friends become a Hobo, so you can do everything that comes with it...like throwing things, drinking unknown liquids and trying a pair of worn out shoes.",
+        "description": "Hobo fight was born in the Global Game Jam (2019) after the event we continue working on it and it became Indie Prize finalist Los Angeles, USA (2019).#Hobo Fight! is a king of the hill game which allows hobos to fight each other.",
         "link": "",
         "responsibilities": [],
         "tools": [
