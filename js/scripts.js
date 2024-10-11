@@ -143,7 +143,7 @@ function initializeResponsibilities() {
     const responsibilitiesTitle = document.querySelector(".modal-section h4");
 
     // Comprobamos si estamos en móvil (pantalla pequeña) o en escritorio (pantalla grande)
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
         responsibilitiesList.style.display = "none";  // Ocultamos responsabilidades en móviles
         responsibilitiesTitle.addEventListener('click', toggleResponsibilities);  // Añadimos el evento solo en móvil
     } else {

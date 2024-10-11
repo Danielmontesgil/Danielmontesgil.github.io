@@ -1,72 +1,6 @@
 /* Responsive Styling */
-@media (max-width: 768px) {
-    #home h1 {
-        font-size: 2.5rem;
-    }
 
-    #home h2 {
-        font-size: 1.5rem;
-    }
-
-    #home p {
-        font-size: 1rem;
-    }
-
-    .modal-content {
-        max-height: 80vh; /* Altura máxima para el modal en móviles */
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 8px 20px;
-    }
-
-    .modal-section h4 {
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para darle algo de profundidad */
-        padding: 10px 15px;
-        border-radius: 8px;  /* Un poco de borde redondeado para hacer que parezca un botón */
-        text-decoration: underline; /* Dejamos la subrayado al pasar el ratón en pantallas grandes */
-    }
-
-    .gallery-container {
-        max-width: 500px;
-    }
-
-    .gallery-slides img {
-        max-width: 500px; /* Limita el tamaño máximo de las imágenes */
-    }
-
-    /* Botones de navegación */
-    .prev-btn, .next-btn {
-        padding: 5px;
-        min-width: 40px; 
-        min-height: 40px;
-    }
-
-    /* Colocamos los botones en los laterales del contenedor del modal */
-    .prev-btn {
-        left: 15px; /* Ajusta el margen izquierdo según sea necesario */
-    }
-
-    .next-btn {
-        right: 15px; /* Ajusta el margen derecho según sea necesario */
-    }
-
-    /* Aumentar el tamaño del texto dentro de los botones */
-    .prev-btn:before, .next-btn:before {
-        font-size: 1rem; /* Aumenta el tamaño del ícono de flecha si es necesario */
-    }
-
-    .modal-section h4:active {
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Un pequeño cambio al hacer clic para darle sensación de interactividad */
-    }
-
-    /* Ocultar la lista de responsabilidades inicialmente */
-    .responsibilities-list {
-        display: none;
-    }
-}
-
+/* Móviles pequeños hasta tablets pequeñas (max-width 480px) */
 @media (max-width: 480px) {
     #home h1 {
         font-size: 2rem;
@@ -96,6 +30,18 @@
 
     .modal-section h4 {
         font-size: 1.2rem; /* Ajustar tamaño de encabezados de secciones */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para darle algo de profundidad */
+        padding: 10px 15px;
+        border-radius: 8px;  /* Un poco de borde redondeado para hacer que parezca un botón */
+        text-decoration: underline; /* Dejamos la subrayado al pasar el ratón en pantallas grandes */
+    }
+
+    .gallery-container {
+        max-width: 200px;
+    }
+
+    .gallery-slides img {
+        max-width: 200px; /* Limita el tamaño máximo de las imágenes */
     }
 
     .prev-btn, .next-btn {
@@ -122,14 +68,180 @@
     }
 }
 
-@media (min-width: 769px) {
-    .responsibilities-list {
-        display: block;  /* Las responsabilidades siempre estarán visibles en pantallas grandes */
+/* Tablets pequeñas (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home h2 {
+        font-size: 1.5rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        max-height: 80vh; /* Altura máxima para el modal en móviles */
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 20px;
     }
 
     .modal-section h4 {
-        text-decoration: none; /* Eliminamos subrayado */
-        box-shadow: none; /* Sin sombra en escritorio */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para darle algo de profundidad */
+        padding: 10px 15px;
+        border-radius: 8px;  /* Un poco de borde redondeado para hacer que parezca un botón */
+        text-decoration: underline; /* Dejamos la subrayado al pasar el ratón en pantallas grandes */
     }
 
+    .gallery-container {
+        max-width: 240px;
+    }
+
+    .gallery-slides img {
+        max-width: 240px; /* Limita el tamaño máximo de las imágenes */
+    }
+
+    /* Botones de navegación */
+    .prev-btn, .next-btn {
+        padding: 5px;
+        min-width: 30px; 
+        min-height: 30px;
+    }
+
+    /* Colocamos los botones en los laterales del contenedor del modal */
+    .prev-btn {
+        left: 15px; /* Ajusta el margen izquierdo según sea necesario */
+    }
+
+    .next-btn {
+        right: 15px; /* Ajusta el margen derecho según sea necesario */
+    }
+
+    /* Aumentar el tamaño del texto dentro de los botones */
+    .prev-btn:before, .next-btn:before {
+        font-size: 1rem; /* Aumenta el tamaño del ícono de flecha si es necesario */
+    }
+
+    .modal-section h4:active {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Un pequeño cambio al hacer clic para darle sensación de interactividad */
+    }
+
+    /* Ocultar la lista de responsabilidades inicialmente */
+    .responsibilities-list {
+        display: none;
+    }
+}
+
+/* Tablets medianas a grandes (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ocultar la lista de responsabilidades inicialmente */
+    .responsibilities-list {
+        display: none;
+    }
+
+    .modal-section h4 {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para darle algo de profundidad */
+        padding: 10px 15px;
+        border-radius: 8px;  /* Un poco de borde redondeado para hacer que parezca un botón */
+        text-decoration: underline; /* Dejamos la subrayado al pasar el ratón en pantallas grandes */
+    }
+
+    .gallery-container {
+        max-width: 500px;
+    }
+
+    .gallery-slides img {
+        max-width: 500px; /* Limita el tamaño máximo de las imágenes */
+    }
+
+    /* Botones de navegación */
+    .prev-btn, .next-btn {
+        padding: 5px;
+        min-width: 40px; 
+        min-height: 40px;
+    }
+
+    /* Colocamos los botones en los laterales del contenedor del modal */
+    .prev-btn {
+        left: 40px; /* Ajusta el margen izquierdo según sea necesario */
+    }
+
+    .next-btn {
+        right: 40px; /* Ajusta el margen derecho según sea necesario */
+    }
+}
+
+/* Tablets grandes y pantallas medianas-grandes (1025px a 1280px) */
+/* Tablets grandes y pantallas medianas-grandes (1025px a 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #home h1 {
+        font-size: 3.5rem; /* Reducido desde 4.5rem */
+    }
+
+    #home h2 {
+        font-size: 2.5rem; /* Reducido desde 3.5rem */
+    }
+
+    #home p {
+        font-size: 1.5rem; /* Reducido desde 2rem */
+    }
+
+    /* Estilos para el modal */
+    .modal-title {
+        font-size: 2rem; /* Aumentar el tamaño del título en el modal */
+    }
+
+    #modalProjectDescription {
+        font-size: 1.2rem; /* Aumentar tamaño del texto en el modal */
+    }
+
+    .modal-section h4 {
+        font-size: 1.6rem; /* Aumentar tamaño de encabezados en secciones del modal */
+    }
+
+    .responsibilities-list li {
+        font-size: 1.2rem; /* Aumentar tamaño del texto de las responsabilidades */
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+    }
+
+    .gallery-container {
+        max-width: 600px;
+    }
+
+    .gallery-slides img {
+        max-width: 600px; /* Limita el tamaño máximo de las imágenes */
+    }
+
+    /* Botones de navegación */
+    .prev-btn, .next-btn {
+        padding: 8px;
+        min-width: 50px; 
+        min-height: 50px;
+    }
+
+    /* Colocamos los botones en los laterales del contenedor del modal */
+    .prev-btn {
+        left: 20px; /* Ajusta el margen izquierdo según sea necesario */
+    }
+
+    .next-btn {
+        right: 20px; /* Ajusta el margen derecho según sea necesario */
+    }
+}
+
+
+/* A partir de 1280px (pantallas de escritorio grandes) */
+@media (min-width: 1281px) {
+    .gallery-slides img {
+        max-width: 600px; /* Ajuste para pantallas grandes de escritorio */
+    }
 }
