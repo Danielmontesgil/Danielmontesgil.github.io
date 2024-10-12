@@ -1,7 +1,7 @@
 [
     {
         "title": "Zynga ZDK",
-        "description": "Master Bounce is a frenetic mobile game with +100 levels of pure adrenaline.#In this game you are in a closed room where there are tons of enemies and you have to protect your base.#Everything is customizable and you can buy a lot of skins just playing the game.",
+        "description": "ZDK team is responsible for maintaining Zynga's entire mobile framework, which is used across all of its games. This team handles the creation, maintenance, and updates of the framework's packages, as well as managing the releases. Additionally, we provide methods to simplify the installation and usage of the framework, both inside and outside of Unity.",
         "link": "",
         "responsibilities": [
             "Designed and implemented a solution using reflection to keep a memory profiler package working after an update that made some classes internal.",
@@ -15,10 +15,70 @@
         ],
         "tools": [
             "unity-icon.svg",
+            "c-sharp-icon.svg",
+            "jenkins-icon.svg",
+            "github-icon.svg"
+        ],
+        "gallery": [
+            "zynga-icon.png"
+        ]
+    },
+    {
+        "title": "Globant VR",
+        "description": "This project is an internal prototype developed at Globant, aimed at creating an immersive and interactive VR experience. Users can watch streaming content and interact with real-time elements within the broadcast. The experience also integrates personalized ads tailored to the user, allowing for dynamic interaction with the content and advertisements in a seamless virtual reality environment.",
+        "link": "",
+        "responsibilities": [
+            "Designes and implemented a multiplayer VR experience in Unity.",
+            "Integrated various libraries, including XR Toolkit, 3D WebView, Playfab for data handling, Photon as the multiplayer, and used WebSocket protocol to listen to events.",
+            "Worked with 3D artist to import and animate assets and sync them over the network."
+        ],
+        "tools": [
+            "unity-icon.svg",
+            "c-sharp-icon.svg",
+            "github-icon.svg",
+            "playfab-icon.png",
+            "photon-icon.jpg"
+        ],
+        "gallery": [
+            "globant-icon.jpg"
+        ]
+    },
+    {
+        "title": "Table & Taste",
+        "description": "Table & Taste was a food-themed interactive mobile game developed by CrowdStar, part of Glu Mobile. The game blends culinary experiences with interactive gameplay, offering players the chance to engage with food-related content in unique ways. Players can explore various aspects of cooking, and food styling, while also discovering new dishes and trends.",
+        "link": "",
+        "responsibilities": [
+            "Redesigned and implemented the game's rewards flow, including the skip animation, reducing the time between matches and giving the player more control on what to see during rewards.",
+            "Improved the features review process by 20% using videos during development.",
+            "Implemented new loading screens using information from EA’s content tool.",
+            "Designed and implemented dynamic HUD widgets to show new and in-progress goals."
+        ],
+        "tools": [
+            "unity-icon.svg",
+            "c-sharp-icon.svg",
+            "zeplin-icon.png"
+        ],
+        "gallery": [
+            "glu-icon.png"
+        ]
+    },
+    {
+        "title": "Hobo Fight",
+        "description": "Hobo Fight is a fast-paced, local multiplayer game of the King of the Hill genre, where players battle for control of a house. Developed during the Game Jam 2019, the game features two unique maps, various power-ups, and a roster of different characters to choose from, allowing for strategic and chaotic gameplay. Players must outmaneuver and outfight their opponents to maintain dominance over the house. Hobo Fight earned recognition by participating in the Indie Prize Awards 2019 in Los Angeles.",
+        "link": "https://gawss.itch.io/hobo-fight",
+        "responsibilities": [
+            "Implemented character movement and controls, ensuring smooth and responsive player interactions.",
+            "Developed the 2D depth system, allowing characters to move across different layers in the game environment.",
+            "Integrated game art assets and animations, ensuring fluid transitions between actions and visually appealing gameplay.",
+            "Collaborated with the design and art teams to synchronize character animations with player inputs and game mechanics.",
+            "Optimized game performance and responsiveness for local multiplayer gameplay, improving the overall player experience."
+        ],
+        "tools": [
+            "unity-icon.svg",
             "c-sharp-icon.svg"
         ],
         "gallery": [
-            "zynga-icon.png",
+            "hobbo-fight-icon.png",
             "Hobo.png",
             "Hobo1.png",
             "Hobo2.png",
@@ -26,57 +86,25 @@
         ]
     },
     {
-        "title": "Globant VR",
-        "description": "Project Blue Book The Game: Hidden Mysteries is the official, mobile free-to-play, hidden object adventure game based on HISTORY’s hit drama series PROJECT BLUE BOOK.  ",
-        "link": "",
-        "responsibilities": [],
-        "tools": [
-            "unity",
-            "c#"
-        ],
-        "gallery": [
-            "globant-icon.jpg"
-        ]
-    },
-    {
-        "title": "Glu Mobile",
-        "description": "Hobo fight was born in the Global Game Jam (2019) after the event we continue working on it and it became Indie Prize finalist Los Angeles, USA (2019).#Hobo Fight! is a king of the hill game which allows hobos to fight each other.",
-        "link": "",
-        "responsibilities": [],
-        "tools": [
-            "unity",
-            "c#"
-        ],
-        "gallery": [
-            "glu-icon.png"
-        ]
-    },
-    {
-        "title": "Hobbo Fight",
-        "description": "The Cave VR is a single player game for cardboard and Samsumg Gear VR. It´s a survival where you need to escape from a danger cave.#The game revolves around the person who has to find the way to escape from this dangerous cave, to do that he needs to hear waters drops and collect chests.#My role for the game was a programmer, I worked on all gameplay mechanics.",
-        "link": "",
-        "responsibilities": [],
-        "tools": [
-            "unity",
-            "c#"
-        ],
-        "gallery": [
-            "hobbo-fight-icon.png"
-        ]
-    },
-    {
         "title": "Rival Stars Basketball",
-        "description": "La Colina is a 2D tower defense game for mobile. It is a game where you need to protect cows from aliens' attack.#In this game you put different types of cows to protect the queen, harvest milk, shoot to aliens and protect the cows.#My role in this project was programmer, I worked on cow´s mechanics like attacks, move, deaths and interactions with aliens.",
-        "link": "",
-        "responsibilities": [],
+        "description": "I participated in the porting of Rival Stars Basketball from C++ to Unity at Wizard Fun Factory. My role involved enhancing the gaming experience by implementing key systems that ensured smooth gameplay and rewarding user engagement.",
+        "link": "https://pikpok.com/games/rivalstarsbasketball/",
+        "responsibilities": [
+            "Developed the save system to allow players to save and load their game progress seamlessly.",
+            "Integrated tournaments and rewards systems, providing players with exciting challenges and incentives for progression.",
+            "Collaborated with cross-functional teams to ensure a cohesive gaming experience."
+        ],
         "tools": [
-            "unity",
-            "c#"
+            "unity-icon.svg",
+            "c-sharp-icon.svg",
+            "c-plus-plus-icon.svg"
         ],
         "gallery": [
-            "rivals-icon.png"
-        ],
-        "video": "LaColina"
+            "rivals-icon.png",
+            "rival-stars.jpg",
+            "rival-stars1.jpg",
+            "rival-stars2.jpg"
+        ]
     },
     {
         "title": "Project 6",
