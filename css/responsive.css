@@ -275,7 +275,11 @@
 
 /* A partir de 1280px (pantallas de escritorio grandes) */
 @media (min-width: 1281px) {
+    .gallery-container {
+        max-width: 450px;
+    }
+
     .gallery-slides img {
-        max-width: 600px; /* Ajuste para pantallas grandes de escritorio */
+        max-width: 450px; /* Ajuste para pantallas grandes de escritorio */
     }
 }
