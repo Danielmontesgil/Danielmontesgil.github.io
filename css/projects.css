@@ -20,7 +20,7 @@
 .project-card {
     background: #f4f4f4;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     opacity: 0;
@@ -32,19 +32,13 @@
     height: 200px; /* Mantiene la proporción original de la imagen */
     object-fit: contain; /* Esto asegura que la imagen se ajuste sin recortar */
     border-radius: 15px; /* Bordes redondeados */
-    margin-bottom: 15px; /* Un poco de espacio entre la imagen y el título */
+    margin-bottom: 5px; /* Un poco de espacio entre la imagen y el título */
 }
 
 .project-card h3 {
     font-size: 1.5rem;
     margin-top: 15px;
     color: #333;
-}
-
-.project-card p {
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #666;
 }
 
 .project-card:hover {

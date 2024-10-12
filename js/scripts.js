@@ -93,12 +93,10 @@ function loadProjects() {
                 if (projectData) {
                     const imgElement = card.querySelector('img');
                     const titleElement = card.querySelector('h3');
-                    const descriptionElement = card.querySelector('p');
 
                     imgElement.src = `src/icons/${projectData.gallery[0]}`; 
                     imgElement.alt = projectData.title;
                     titleElement.innerText = projectData.title;
-                    descriptionElement.innerText = projectData.description;
 
                     // Asignar evento para abrir el modal al hacer clic en la tarjeta
                     card.onclick = function() {
