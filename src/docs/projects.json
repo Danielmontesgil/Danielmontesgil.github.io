@@ -14,10 +14,11 @@
             "Perform builds, tests, and other basic CI/CD tasks using Jenkins."
         ],
         "tools": [
-            "unity-icon.svg",
-            "c-sharp-icon.svg",
-            "jenkins-icon.svg",
-            "github-icon.svg"
+            {"name": "Unity", "logo": "unity-icon.svg"},
+            {"name": "C#", "logo": "c-sharp-icon.svg"},
+            {"name": "Jenkins", "logo": "jenkins-icon.svg"},
+            {"name": "Github", "logo": "github-icon.svg"}
+
         ],
         "gallery": [
             "zynga-icon.png"
@@ -33,11 +34,11 @@
             "Worked with 3D artist to import and animate assets and sync them over the network."
         ],
         "tools": [
-            "unity-icon.svg",
-            "c-sharp-icon.svg",
-            "github-icon.svg",
-            "playfab-icon.png",
-            "photon-icon.jpg"
+            {"name": "Unity", "logo": "unity-icon.svg"},
+            {"name": "C#", "logo": "c-sharp-icon.svg"},
+            {"name": "Github", "logo": "github-icon.svg"},
+            {"name": "Playfab", "logo": "playfab-icon.png"},
+            {"name": "Photon", "logo": "photon-icon.jpg"}
         ],
         "gallery": [
             "globant-icon.jpg"
@@ -54,9 +55,9 @@
             "Designed and implemented dynamic HUD widgets to show new and in-progress goals."
         ],
         "tools": [
-            "unity-icon.svg",
-            "c-sharp-icon.svg",
-            "zeplin-icon.png"
+            {"name": "Unity", "logo": "unity-icon.svg"},
+            {"name": "C#", "logo": "c-sharp-icon.svg"},
+            {"name": "Zeplin", "logo": "zeplin-icon.png"}
         ],
         "gallery": [
             "glu-icon.png"
@@ -74,8 +75,8 @@
             "Optimized game performance and responsiveness for local multiplayer gameplay, improving the overall player experience."
         ],
         "tools": [
-            "unity-icon.svg",
-            "c-sharp-icon.svg"
+            {"name": "Unity", "logo": "unity-icon.svg"},
+            {"name": "C#", "logo": "c-sharp-icon.svg"}
         ],
         "gallery": [
             "hobbo-fight-icon.png",
@@ -95,9 +96,9 @@
             "Collaborated with cross-functional teams to ensure a cohesive gaming experience."
         ],
         "tools": [
-            "unity-icon.svg",
-            "c-sharp-icon.svg",
-            "c-plus-plus-icon.svg"
+            {"name": "Unity", "logo": "unity-icon.svg"},
+            {"name": "C#", "logo": "c-sharp-icon.svg"},
+            {"name": "C++", "logo": "c-plus-plus-icon.svg"}
         ],
         "gallery": [
             "rivals-icon.png",
@@ -112,8 +113,8 @@
         "link": "",
         "responsibilities": [],
         "tools": [
-            "unity",
-            "c#"
+            {"name": "Unity", "logo": "unity-icon.svg"},
+            {"name": "C#", "logo": "c-sharp-icon.svg"}
         ],
         "gallery": [
             "zynga-icon.png"

@@ -9,12 +9,21 @@ function openModal(project) {
     const techLogosContainer = document.getElementById("modalTechLogos");
     techLogosContainer.innerHTML = ''; // Limpiar logos anteriores
 
-    // Añadir logos de tecnologías
-    project.tools.forEach(logo => {
-        const img = document.createElement('img');
-        img.src = `src/icons/${logo}`;
-        img.alt = "Technology Logo";
-        techLogosContainer.appendChild(img);
+    project.tools.forEach(tool => {
+        const techItem = document.createElement('div');
+        techItem.classList.add('tech-item');
+
+        const techImg = document.createElement('img');
+        techImg.src = `src/icons/${tool.logo}`;
+        techImg.alt = tool.name;
+
+        const techName = document.createElement('span');
+        techName.classList.add('tech-name');
+        techName.innerText = tool.name;
+
+        techItem.appendChild(techImg);
+        techItem.appendChild(techName);
+        techLogosContainer.appendChild(techItem);
     });
 
     // Limpiar responsabilidades anteriores

@@ -167,11 +167,45 @@
 }
 
 .tech-logos img {
-    width: 40px;  /* Ajustado tamaño para que los logos sean más visibles */
+    width: 40px;
     height: auto;
     margin: 8px;
     transition: transform 0.3s ease;
     border-radius: 15px;
+    position: relative;
+}
+
+.tech-logos .tech-item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.tech-logos img:hover {
+    transform: scale(1.2);
+}
+
+/* Tooltip for tech name */
+.tech-logos .tech-name {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 1px 3px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 95%; /* Above the logo */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-logos .tech-item:hover .tech-name {
+    visibility: visible;
+    opacity: 1;
 }
 
 .tech-logos img:hover {
