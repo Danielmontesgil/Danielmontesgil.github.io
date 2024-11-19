@@ -155,7 +155,7 @@ function initializeResponsibilities() {
         responsibilitiesTitle.addEventListener('click', toggleResponsibilities);  // Añadimos el evento solo en móvil
     } else {
         responsibilitiesList.style.display = "block";  // Mostramos siempre las responsabilidades en escritorio
-        responsibilitiesTitle.innerText = "Responsabilidades";  // Título normal en escritorio
+        responsibilitiesTitle.innerText = "Responsibilities";  // Título normal en escritorio
     }
 }
 
